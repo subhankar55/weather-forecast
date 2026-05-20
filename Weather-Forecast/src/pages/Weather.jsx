@@ -46,7 +46,7 @@ export default function Weather(){
             <button 
             onClick={handleClick}
             className="block mx-auto my-[1em] bg-gray-300 rounded-3xl px-[1.2em] py-[0.3em] cursor-pointer hover:bg-gray-500 hover:text-white text-2xl font-medium">
-                🡐 Back
+                ← Back
             </button>
             
         </div>
