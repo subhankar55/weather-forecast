@@ -36,7 +36,7 @@ export default function Weather(){
                     <ol className="flex flex-col justify-center items-center">
                         <li className="m-[0.5em] text-white text-sm md:text-xl">Temperature: {(temp - 273.15).toFixed(2)} °C</li>
                         <li className="m-[0.5em] text-white text-sm md:text-xl">Humidity: {humidity}%</li>
-                        <li className="m-[0.5em] text-white text-sm md:text-xl">Wind Speed: {wind * 3.6} km/hr</li>
+                        <li className="m-[0.5em] text-white text-sm md:text-xl">Wind Speed: {(wind * 3.6).toFixed(2)} km/hr</li>
                         <li className="m-[0.5em] text-white text-sm md:text-xl">Description: {description}</li>
                         <li className="m-[0.5em] text-white text-sm md:text-xl">Weather: {weather}</li>
                     </ol>
