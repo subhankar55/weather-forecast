@@ -8,10 +8,10 @@ import forecast from "../services/weatherdata.js";
 export default function Home(){
 
 
-  const [city,setCity] = useState("kolkata");
+  const [city,setCity] = useState("");
   const [dateTime,setDateTime] = useState(new Date());
   const [time,setTime] = useState("AM");
-  const [hours,setHours] = useState(13);
+  const [hours,setHours] = useState(30);
 
 
   const navigate = useNavigate();
@@ -47,7 +47,7 @@ export default function Home(){
       alert("Please enter a city name");
       return;
     }
-    if(hours > 12){
+    if(hours >= 30){
       alert("Please enter a valid time");
       return;
     }
@@ -145,7 +145,6 @@ export default function Home(){
                         onChange={handlehours}
                         >
                         <option value="" disabled selected>select hours</option>
-                        <option value="0">0</option>
                         <option value="3">3</option>
                         <option value="6">6</option>
                         <option value="9">9</option>
