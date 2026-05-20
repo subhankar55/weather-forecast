@@ -156,9 +156,9 @@ export default function Home(){
                   
                       <button
                       type='submit'
-                      className='block mx-auto my-[1em] py-[1em] px-[2.5em] rounded-lg shadow-md shadow-white/80 bg-green-900 text-center text-white font-medium hover:bg-green-700 cursor-pointer'
+                      className='block mx-auto my-[1em] py-[1em] px-[1.5em] rounded-lg shadow-md shadow-white/80 bg-green-900 text-center text-white font-medium hover:bg-green-700 cursor-pointer'
                       >
-                        Search
+                        Get Weather
                       </button>
                       
                       
