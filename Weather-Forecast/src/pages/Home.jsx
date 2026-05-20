@@ -11,7 +11,7 @@ export default function Home(){
   const [city,setCity] = useState("kolkata");
   const [dateTime,setDateTime] = useState(new Date());
   const [time,setTime] = useState("AM");
-  const [hours,setHours] = useState(0);
+  const [hours,setHours] = useState(13);
 
 
   const navigate = useNavigate();
@@ -43,12 +43,19 @@ export default function Home(){
   const handlesubmit = async (e) =>{
 
     e.preventDefault();
+    if(city.trim() === "") {
+      alert("Please enter a city name");
+      return;
+    }
+    if(hours > 12){
+      alert("Please enter a valid time");
+      return;
+    }
     const updatedDate = new Date(dateTime);
     updatedDate.setHours(hours);
     updatedDate.setMinutes(0);
     updatedDate.setSeconds(0);
     const finalDate = updatedDate.toString();
-    console.log(finalDate);
 
 
 
@@ -78,12 +85,12 @@ export default function Home(){
         <div className='relative w-full min-h-screen bg-cover bg-center bg-no-repeat'
               style={{backgroundImage:`url(${bgImage})`}}
             >
-              <div className='absolute inset-0 py-[2em] bg-cover bg-black/75'></div>
-              <div className="relative">
+              <div className='absolute inset-0 bg-black/75'></div>
+              <div className="relative py-[2em]">
                   <div className='text-center mb-[0.5em] text-white font-medium text-2xl md:text-3xl'>
                     Get Weather-Forecast of your city!
                   </div>
-                  <div className='w-full md:w-[40%] bg-gray-700 opacity-80  mx-auto rounded-md pt-[2em] overflow-y-auto mt-[1em] md:mt[0.5em]'>
+                  <div className='w-full min-h-[50vh] md:w-[40%] bg-gray-700 opacity-80  mx-auto rounded-md pt-[2em] overflow-y-auto mt-[1em] md:mt[0.5em]'>
                     <h3 className='text-center text-white text-xl md:text-2xl font-medium'>
                       Enter Details
                     </h3>
